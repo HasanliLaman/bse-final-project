@@ -1,0 +1,220 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+nav {
+  border-bottom: 1px solid #e5e5e5;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.6rem 0;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  .nav__logo {
+    flex-grow: 1;
+  }
+
+  .nav__logo svg {
+    width: 116px;
+  }
+
+  //Style for navbar links
+  .nav__links {
+    color: $color-dark-blue;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    gap: 2.4rem;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 8.7rem;
+    margin-top: 5rem;
+    order: -2;
+  }
+
+  //Style for language and currency dropdowns
+  .nav__language,
+  .nav__currency {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .nav__language {
+    padding: 2.4rem 2.9rem;
+    margin: 2.4rem 0 3.2rem;
+    border-top: 1px solid $color-light-gray;
+    border-bottom: 1px solid $color-light-gray;
+
+    ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    li {
+      align-items: center;
+      background-color: $color-light-blue;
+      border-radius: 50%;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      width: 40px;
+      cursor: pointer;
+    }
+
+    .dropdown--active {
+      background-color: $color-blue;
+      color: $color-yellow;
+    }
+  }
+
+  span {
+    color: $color-gray;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  .nav__currency {
+    @include dropdown(1.1rem);
+    width: 88px;
+    justify-content: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: $border-radius;
+    background-color: $color-light-blue;
+  }
+
+  // Style for buttons
+  .nav__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+    order: -1;
+  }
+
+  .nav__btn {
+    padding: 1.2rem 2.6rem;
+  }
+
+  .nav__btn:not(.nav__btn:first-child) {
+    @include btn($color-yellow, $color-dark-blue);
+  }
+
+  .nav__btn:first-child {
+    @include btn($color-white, $color-dark-blue);
+    border: 1px solid #c5cee0;
+  }
+
+  // Style for navbar collapsable
+  .nav__collapse {
+    align-items: center;
+    background-color: $color-white;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    overflow-y: scroll;
+    padding: 2.8rem 2.4rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+  }
+
+  .nav__close {
+    position: fixed;
+    top: 3rem;
+    left: 2.2rem;
+  }
+
+  // Override hide classes
+  .hide-desktop {
+    display: block;
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  .hide-mobile {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+
+  // Styles for desktop
+  @include lg {
+    .nav__logo svg {
+      width: 152px;
+    }
+
+    .nav__links {
+      flex-direction: row;
+      gap: 4.8rem;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+
+    .nav__language,
+    .nav__currency {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .nav__language {
+      @include dropdown(0.6rem);
+      margin: 0 0 0 10rem;
+      padding: 0 1.6rem 0 0;
+      border: 0;
+      border-right: 1px solid $color-dark-blue;
+
+      ul {
+        gap: 0;
+        display: none;
+      }
+
+      li {
+        height: auto;
+        width: 100%;
+        background-color: transparent;
+        border-radius: 0;
+      }
+
+      .dropdown--active {
+        background-color: transparent;
+        color: inherit;
+      }
+    }
+
+    .nav__currency {
+      width: auto;
+      padding: 0;
+      background-color: transparent;
+      margin: 0 3.9rem 0 1.6rem;
+    }
+
+    .nav__buttons {
+      flex-direction: row;
+      gap: 1.6rem;
+      order: 0;
+    }
+
+    .nav__collapse {
+      flex-direction: row;
+      padding: 0;
+      position: static;
+      z-index: 10;
+      transform: translateX(0);
+      overflow-y: auto;
+    }
+  }
+}
