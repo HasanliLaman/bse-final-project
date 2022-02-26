@@ -1,0 +1,20 @@
+@use "../utilities/variables" as *;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: $color-blue;
+  font-family: "Euclid Circular A", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $color-dark-blue;
+}

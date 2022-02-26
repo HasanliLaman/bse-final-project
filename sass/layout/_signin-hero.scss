@@ -1,0 +1,79 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+//todo: checkbox, password-field, log-in
+//todo-optional: password show-dont show
+
+.hero {
+  //Style for header
+  header {
+    background-color: $color-yellow;
+    padding: 2.4rem 1.6rem 0;
+    display: flex;
+    gap: 1.6rem;
+
+    h1,
+    a {
+      font-size: 16px;
+      line-height: 24px;
+      color: $color-blue;
+      background-color: $color-white;
+      flex: 1 1 0;
+      padding: 1.4rem 0 1rem;
+      text-align: center;
+      font-weight: 500;
+      border-top-right-radius: $border-radius;
+      border-top-left-radius: $border-radius;
+    }
+
+    a {
+      background-color: rgba(255, 255, 255, 0.431);
+      transition: all 0.5s;
+    }
+
+    a:hover {
+      background-color: rgba(255, 255, 255, 0.633);
+    }
+  }
+
+  @include md {
+    padding-top: 6.8rem;
+    padding-bottom: 10rem;
+
+    &__login {
+      padding-right: 5rem;
+    }
+
+    & > div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+    }
+
+    img {
+      max-width: 300px;
+    }
+
+    header {
+      background-color: transparent;
+      color: $color-gray;
+      display: block;
+      padding: 0;
+      text-align: center;
+
+      h1 {
+        font-size: 20px;
+        line-height: 28px;
+        padding: 0;
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  @include lg {
+    img {
+      max-width: 383px;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+//Style for sign in with social media
+.hero__socials {
+  display: flex;
+  gap: 0.8rem;
+
+  button {
+    @include btn($color-white, $color-dark-blue);
+    align-items: center;
+    border: 1px solid #c5cee0;
+    display: flex;
+    flex: 1 1 0;
+    padding: 1rem;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  p {
+    margin-left: 1rem;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+// Style for line between sign in alternatives
+.hero__line {
+  align-items: center;
+  color: $color-gray;
+  display: flex;
+  gap: 3.4rem;
+  margin: 1.6rem 0;
+
+  div:first-child,
+  div:last-child {
+    height: 1px;
+    background-color: $color-light-blue;
+    flex-grow: 1;
+  }
+}
+
+// Style for form
+.hero__form {
+  padding-top: 5.6rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+
+  form {
+    @include form;
+
+    button {
+      @include btn($color-yellow, $color-dark-blue);
+      padding: 1.6rem 0;
+      width: 100%;
+      margin-top: 5.6rem;
+    }
+  }
+
+  // Specific style for password field
+  .form__password {
+    display: flex;
+    background-color: #f7f9fc;
+    border-radius: $border-radius;
+    border: 1px solid $color-light-blue;
+
+    input {
+      flex-grow: 1;
+      border: 0;
+    }
+
+    input:active,
+    input:focus {
+      border: 0;
+      box-shadow: none;
+    }
+
+    .icon__eye {
+      display: flex;
+      align-items: center;
+      padding-right: 1.4rem;
+
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+
+  // Style for checkbox and link
+  .form__group:last-of-type {
+    flex-direction: row;
+    align-items: center;
+
+    input {
+      transform: scale(1.57);
+    }
+  }
+
+  .form__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: #3366ff;
+      transition: all 0.3s;
+    }
+
+    a:hover {
+      color: darken(#3366ff, 15%);
+    }
+  }
+
+  @include sm {
+    max-width: 540px;
+  }
+
+  @include md {
+    width: 312px;
+    margin: auto;
+    padding-top: 4rem;
+    padding-bottom: 0;
+
+    &.block {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+nav {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  .nav__logo {
+    width: 103px;
+  }
+
+  @include md {
+    .nav__logo {
+      width: 152px;
+    }
+
+    .hide-mobile {
+      display: flex;
+      align-items: center;
+      gap: 3.2rem;
+
+      a {
+        @include btn($color-white, $color-dark-blue);
+        padding: 1.2rem 2.6rem;
+        border: 1px solid $color-dark-blue;
+        position: static;
+      }
+
+      a:hover {
+        background-color: $color-dark-blue;
+        color: $color-white;
+      }
+    }
+  }
+}

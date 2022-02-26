@@ -1,0 +1,22 @@
+// Colors
+$color-yellow: #ffd339;
+$color-light-color: #fff2af;
+$color-blue: #2e3a59;
+$color-dark-blue: #222b45;
+$color-green: #00d68f;
+$color-gray: #8f9bb3;
+$color-light-gray: #edf1f7;
+$color-light-blue: #e4e9f2;
+$color-white: #fff;
+
+// Border
+$border-radius: 8px;
+
+// Breakpoints
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
