@@ -512,6 +512,9 @@ nav .nav__collapse {
   transition: all 0.5s;
   transform: translateX(-100%);
 }
+nav .nav--active {
+  transform: translateX(0);
+}
 nav .nav__close {
   position: fixed;
   top: 3rem;
@@ -534,6 +537,9 @@ nav .hide-mobile {
   }
 }
 @media (min-width: 992px) {
+  nav .overlay {
+    display: none;
+  }
   nav .nav__logo svg {
     width: 152px;
   }

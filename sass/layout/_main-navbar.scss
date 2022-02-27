@@ -127,6 +127,10 @@ nav {
     transform: translateX(-100%);
   }
 
+  .nav--active {
+    transform: translateX(0);
+  }
+
   .nav__close {
     position: fixed;
     top: 3rem;
@@ -152,6 +156,10 @@ nav {
 
   // Styles for desktop
   @include lg {
+    .overlay {
+      display: none;
+    }
+
     .nav__logo svg {
       width: 152px;
     }

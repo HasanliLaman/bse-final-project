@@ -5,10 +5,10 @@ const btnClose = document.querySelector(".nav__close");
 
 hamburger?.addEventListener("click", function () {
   overlay.classList.remove("hidden");
-  navbar.style.transform = "translateX(0)";
+  navbar.classList.add("nav--active");
 });
 
 btnClose?.addEventListener("click", function () {
   overlay.classList.add("hidden");
-  navbar.style.transform = "translateX(-100%)";
+  navbar.classList.remove("nav--active");
 });
