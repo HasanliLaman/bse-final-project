@@ -169,6 +169,126 @@ h3,
 h4,
 h5 {
   color: #222b45;
+  font-weight: 500;
+}
+
+.hero__form {
+  padding: 2.5rem 1.6rem 5.6rem;
+}
+.hero__form h1 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.hero__form form label {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+.hero__form form input,
+.hero__form form select {
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  border: 1px solid #e4e9f2;
+  color: #8f9bb3;
+  font-family: inherit;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  outline: 0;
+  padding: 1.4rem 1.6rem;
+}
+.hero__form form input::placeholder {
+  color: #8f9bb3;
+}
+.hero__form form input:active,
+.hero__form form input:focus,
+.hero__form form select:active,
+.hero__form form select:focus {
+  border: 1px solid #e4e9f2;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #e4e9f2;
+}
+.hero__form form .form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.hero__form form .form__group:not(.form__group:last-of-type) {
+  margin-bottom: 2.4rem;
+}
+.hero__form form label[for=words] {
+  display: flex;
+  justify-content: space-between;
+}
+.hero__form form option {
+  font-size: 1.6rem;
+}
+.hero__form form p {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 0.8rem;
+  color: #8f9bb3;
+}
+.hero__form form button {
+  background-color: #00d68f;
+  border-radius: 8px;
+  color: #fff;
+  border: 1px solid #00d68f;
+  cursor: pointer;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.6rem;
+  transition: all 0.5s;
+  padding: 1.6rem 1rem;
+  width: 100%;
+}
+.hero__form form button:hover {
+  background-color: #009966;
+  border: 1px solid #009966;
+}
+@media (min-width: 768px) {
+  .hero__form {
+    max-width: 384px;
+    padding: 5.6rem 1.6rem 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .hero__form {
+    width: 384px;
+    padding: 5.6rem 0rem 2rem;
+  }
+}
+
+.hero__keywords {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 2.4rem;
+  overflow-x: auto;
+}
+.hero__keywords span {
+  align-items: center;
+  background-color: #2e3a59;
+  border-radius: 25px;
+  color: #fff;
+  display: flex;
+  font-weight: 500;
+  gap: 1.6rem;
+  padding: 0.6rem 1rem 0.6rem 1.6rem;
+  white-space: nowrap;
+}
+.hero__keywords svg {
+  cursor: pointer;
+}
+
+.hero__cost {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 4.2rem 0;
+}
+.hero__cost span {
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .block {
@@ -501,6 +621,71 @@ nav .nav__currency {
     z-index: 10;
     transform: translateX(0);
     overflow-y: auto;
+  }
+}
+
+.hero {
+  display: grid;
+}
+.hero__content {
+  background-color: #fff2af;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  padding: 4.8rem 1.6rem;
+}
+.hero__content p:not(p:last-of-type) {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero .hero__content {
+    order: -1;
+    padding-top: 8rem;
+  }
+  .hero .hero__content article,
+.hero .hero__content svg {
+    max-width: 488px;
+    margin: 0 auto;
+  }
+  .hero .hero__form {
+    justify-self: center;
+  }
+}
+@media (min-width: 992px) {
+  .hero .hero__content {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .hero__content article,
+.hero .hero__content svg {
+    width: 488px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+  .hero .hero__circle {
+    position: absolute;
+    left: -100px;
+    bottom: -125px;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-radius: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .hero .hero__form {
+    justify-self: start;
+    margin-left: 10rem;
+  }
+  .hero .hero__circle {
+    left: -166px;
+    bottom: -207px;
+    width: 662px;
+    height: 662px;
   }
 }
 

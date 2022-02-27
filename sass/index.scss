@@ -7,7 +7,9 @@
 @forward "utilities/variables";
 
 // Components
+@forward "components/content-form";
 
 // Layout
 @forward "layout/layout";
 @forward "layout/main-navbar";
+@forward "layout/content-hero";

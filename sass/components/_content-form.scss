@@ -1,0 +1,84 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.hero__form {
+  padding: 2.5rem 1.6rem 5.6rem;
+
+  h1 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  form {
+    @include form;
+
+    label[for="words"] {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    option {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 0.8rem;
+      color: $color-gray;
+    }
+
+    button {
+      @include btn($color-green, $color-white);
+      padding: 1.6rem 1rem;
+      width: 100%;
+    }
+  }
+
+  @include md {
+    max-width: 384px;
+    padding: 5.6rem 1.6rem 2rem;
+  }
+
+  @include lg {
+    width: 384px;
+    padding: 5.6rem 0rem 2rem;
+  }
+}
+
+.hero__keywords {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 2.4rem;
+  overflow-x: auto;
+
+  span {
+    align-items: center;
+    background-color: $color-blue;
+    border-radius: 25px;
+    color: $color-white;
+    display: flex;
+    font-weight: 500;
+    gap: 1.6rem;
+    padding: 0.6rem 1rem 0.6rem 1.6rem;
+    white-space: nowrap;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.hero__cost {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 4.2rem 0;
+
+  span {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

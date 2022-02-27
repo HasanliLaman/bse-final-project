@@ -1,0 +1,76 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.hero {
+  display: grid;
+
+  &__content {
+    background-color: $color-light-yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    padding: 4.8rem 1.6rem;
+
+    p:not(p:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+
+    .hero__content {
+      order: -1;
+      padding-top: 8rem;
+
+      article,
+      svg {
+        max-width: 488px;
+        margin: 0 auto;
+      }
+    }
+
+    .hero__form {
+      justify-self: center;
+    }
+  }
+
+  @include lg {
+    .hero__content {
+      position: relative;
+      overflow: hidden;
+
+      article,
+      svg {
+        width: 488px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+      }
+    }
+
+    .hero__circle {
+      position: absolute;
+      left: -100px;
+      bottom: -125px;
+      width: 400px;
+      height: 400px;
+      background-color: rgba(255, 255, 255, 0.32);
+      border-radius: 50%;
+    }
+  }
+
+  @include xl {
+    .hero__form {
+      justify-self: start;
+      margin-left: 10rem;
+    }
+
+    .hero__circle {
+      left: -166px;
+      bottom: -207px;
+      width: 662px;
+      height: 662px;
+    }
+  }
+}
