@@ -431,18 +431,19 @@ nav .nav__currency.dropdown {
   gap: 1.1rem;
   font-weight: 500;
   cursor: pointer;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 nav .nav__currency.dropdown ul {
-  position: absolute;
-  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #c5cee0;
   left: 0;
+  overflow: hidden;
+  position: absolute;
   right: 0;
   text-align: center;
   top: 100%;
-  border-radius: 8px;
-  background-color: #fff;
-  border: 1px solid #c5cee0;
-  overflow: hidden;
 }
 nav .nav__currency.dropdown li {
   cursor: pointer;
@@ -457,6 +458,14 @@ nav .nav__currency.dropdown li:last-of-type {
 }
 nav .nav__currency.dropdown li:hover {
   background-color: #edf1f7;
+}
+nav .nav__currency ul {
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: all 0.3s;
+}
+nav .nav__currency .dropdown--open {
+  transform: scaleY(1);
 }
 nav .nav__buttons {
   display: flex;
@@ -568,18 +577,19 @@ nav .nav__currency {
     gap: 0.6rem;
     font-weight: 500;
     cursor: pointer;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
   }
   nav .nav__language.dropdown ul {
-    position: absolute;
-    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #c5cee0;
     left: 0;
+    overflow: hidden;
+    position: absolute;
     right: 0;
     text-align: center;
     top: 100%;
-    border-radius: 8px;
-    background-color: #fff;
-    border: 1px solid #c5cee0;
-    overflow: hidden;
   }
   nav .nav__language.dropdown li {
     cursor: pointer;
@@ -598,6 +608,9 @@ nav .nav__currency {
   nav .nav__language ul {
     gap: 0;
     display: none;
+  }
+  nav .nav__language .dropdown--open {
+    display: block;
   }
   nav .nav__language li {
     height: auto;
@@ -626,7 +639,7 @@ nav .nav__currency {
     position: static;
     z-index: 10;
     transform: translateX(0);
-    overflow-y: auto;
+    overflow: visible;
   }
 }
 
