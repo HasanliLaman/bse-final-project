@@ -52,7 +52,7 @@
   display: flex;
   gap: 0.4rem;
   margin-top: 2.4rem;
-  overflow-x: auto;
+  flex-wrap: wrap;
 
   span {
     align-items: center;

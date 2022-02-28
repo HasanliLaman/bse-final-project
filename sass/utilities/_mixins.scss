@@ -54,6 +54,17 @@
       0 0 8px opacify($color-light-blue, 0.5);
   }
 
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-image: url("../../images/icon-chevron.svg");
+    background-position: right 2rem center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
   .form__group {
     display: flex;
     flex-direction: column;

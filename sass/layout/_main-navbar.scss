@@ -36,6 +36,14 @@ nav {
     margin-bottom: 8.7rem;
     margin-top: 5rem;
     order: -2;
+
+    li {
+      transition: all 0.3s;
+    }
+
+    li:hover {
+      color: darken($color-yellow, 12%);
+    }
   }
 
   //Style for language and currency dropdowns
@@ -118,6 +126,12 @@ nav {
   .nav__btn:first-child {
     @include btn($color-white, $color-dark-blue);
     border: 1px solid #c5cee0;
+  }
+
+  .nav__btn:first-child:hover {
+    border: 1px solid #c5cee0;
+    color: $color-white;
+    background-color: $color-dark-blue;
   }
 
   // Style for navbar collapsable

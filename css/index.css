@@ -207,6 +207,15 @@ h5 {
   border: 1px solid #e4e9f2;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #e4e9f2;
 }
+.hero__form form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../../images/icon-chevron.svg");
+  background-position: right 2rem center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 .hero__form form .form__group {
   display: flex;
   flex-direction: column;
@@ -263,7 +272,7 @@ h5 {
   display: flex;
   gap: 0.4rem;
   margin-top: 2.4rem;
-  overflow-x: auto;
+  flex-wrap: wrap;
 }
 .hero__keywords span {
   align-items: center;
@@ -382,6 +391,12 @@ nav .nav__links {
   margin-bottom: 8.7rem;
   margin-top: 5rem;
   order: -2;
+}
+nav .nav__links li {
+  transition: all 0.3s;
+}
+nav .nav__links li:hover {
+  color: #fbc300;
 }
 nav .nav__language,
 nav .nav__currency {
@@ -505,6 +520,11 @@ nav .nav__btn:first-child {
   line-height: 1.6rem;
   transition: all 0.5s;
   border: 1px solid #c5cee0;
+}
+nav .nav__btn:first-child:hover {
+  border: 1px solid #c5cee0;
+  color: #fff;
+  background-color: #222b45;
 }
 nav .nav__collapse {
   align-items: center;
