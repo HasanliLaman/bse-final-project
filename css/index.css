@@ -388,8 +388,7 @@ nav .nav__links {
   gap: 2.4rem;
   line-height: 28px;
   text-align: center;
-  margin-bottom: 8.7rem;
-  margin-top: 5rem;
+  margin: 8rem 0;
   order: -2;
 }
 nav .nav__links li {
@@ -482,6 +481,27 @@ nav .nav__currency ul {
 nav .nav__currency .dropdown--open {
   transform: scaleY(1);
 }
+nav .nav__profile {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+nav .nav__profile * {
+  cursor: pointer;
+}
+nav .nav__basket {
+  position: relative;
+  margin-bottom: -0.7rem;
+}
+nav .nav__basket div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffd339;
+  border-radius: 50%;
+  top: -3px;
+  right: -3px;
+}
 nav .nav__buttons {
   display: flex;
   flex-direction: column;
@@ -533,7 +553,7 @@ nav .nav__collapse {
   display: flex;
   flex-direction: column;
   left: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 2.8rem 2.4rem;
   position: fixed;
   top: 0;
@@ -647,6 +667,9 @@ nav .nav__currency {
     padding: 0;
     background-color: transparent;
     margin: 0 3.9rem 0 1.6rem;
+  }
+  nav .nav__profile {
+    margin-left: 6rem;
   }
   nav .nav__buttons {
     flex-direction: row;

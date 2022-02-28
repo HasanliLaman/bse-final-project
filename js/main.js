@@ -71,7 +71,7 @@ const keywordHandler = function () {
   const keywordInput = document.querySelector("#keywords");
   const btnClose = document.querySelectorAll(".hero__keywords svg");
 
-  keywordInput.addEventListener("keyup", function (e) {
+  keywordInput?.addEventListener("keyup", function (e) {
     if (e.keyCode == 188) {
       e.preventDefault();
       keywordContainer.insertAdjacentHTML(
@@ -100,7 +100,7 @@ const keywordHandler = function () {
     }
   });
 
-  keywordContainer.addEventListener("click", function (e) {
+  keywordContainer?.addEventListener("click", function (e) {
     const target = e.target.closest(".hero__keywords svg");
     target.parentElement.style.display = "none";
   });
