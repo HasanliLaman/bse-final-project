@@ -1,0 +1,77 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.hero__menu {
+  padding: 1.6rem;
+  background-color: $color-white;
+
+  ul {
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  li {
+    background-color: $color-white;
+    border-radius: 25px;
+    border: 1px solid $color-blue;
+    cursor: pointer;
+    color: $color-blue;
+    font-weight: 500;
+    padding: 0.6rem 1.6rem;
+    transition: all 0.3s;
+    white-space: nowrap;
+
+    &:hover:not(.hero__menu--active) {
+      background-color: lighten($color-blue, 67%);
+    }
+  }
+
+  .hero__menu--active {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+
+  @include md {
+    padding: 3.1rem 6.3rem 11rem 2.4rem;
+    border-radius: $border-radius;
+
+    header {
+      font-size: 16px;
+      line-height: 24px;
+      color: $color-gray;
+      font-weight: 500;
+      margin-bottom: 4rem;
+    }
+
+    ul {
+      flex-direction: column;
+    }
+
+    li {
+      border-radius: $border-radius;
+      border: 0;
+      display: flex;
+      gap: 1.6rem;
+      align-items: center;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 1.2rem 1rem 1.2rem 2.7rem;
+    }
+
+    .hero__menu--active {
+      background-color: $color-yellow;
+      color: $color-blue;
+    }
+
+    div {
+      width: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
