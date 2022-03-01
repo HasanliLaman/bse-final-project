@@ -172,6 +172,10 @@ h5 {
   font-weight: 500;
 }
 
+.text-muted {
+  color: #8f9bb3;
+}
+
 .hero__menu {
   padding: 1.6rem;
   background-color: #fff;
@@ -239,6 +243,235 @@ h5 {
   }
 }
 
+body {
+  padding: 2rem;
+  background-color: #edf1f7;
+}
+
+.hero__orders {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.hero__order {
+  background-color: #fff;
+  border-radius: 8px;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+
+.order__info {
+  padding: 2.4rem 0 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 2.4rem;
+}
+.order__info span {
+  font-size: 12px;
+  line-height: 16px;
+  color: #8f9bb3;
+}
+.order__info p {
+  font-weight: 500;
+  margin-top: 0.4rem;
+}
+.order__info > div:last-of-type {
+  margin-top: 1.6rem;
+  grid-column: 1/3;
+  justify-self: center;
+}
+
+.order__status--completed {
+  color: #00d68f;
+}
+.order__status--pending {
+  color: #ffd339;
+}
+
+.order__expand {
+  align-items: center;
+  background: rgba(0, 149, 255, 0.08);
+  border-radius: 50%;
+  border: 1px solid #0095ff;
+  cursor: pointer;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+.order__expand svg {
+  width: 9.33px;
+  height: 4.67px;
+  fill: #0095ff;
+  transition: all 0.3s;
+}
+.order__expand--active svg {
+  transform: rotate(-180deg);
+}
+
+.order__content {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.order__details {
+  padding: 2.4rem 0 3.2rem;
+  border-top: 1.5px solid #edf1f7;
+}
+.order__link {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  font-size: 16px;
+  line-height: 24px;
+  align-items: center;
+  grid-row-gap: 1.6rem;
+}
+.order__link p {
+  color: #fff;
+  background-color: #0095ff;
+  border-radius: 8px;
+  padding: 0.4rem 1.1rem;
+}
+.order__link svg {
+  grid-column: 3/4;
+  cursor: pointer;
+}
+.order__link a {
+  display: flex;
+  align-items: center;
+  gap: 0.96rem;
+  padding: 0.4rem 1.2rem;
+  background-color: #ffea88;
+  border-radius: 8px;
+  grid-row: 2/3;
+  grid-column: 1/3;
+  justify-self: start;
+}
+.order__specifications {
+  padding: 2.4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.order__specifications > div {
+  display: flex;
+  flex-direction: column;
+}
+.order__specifications p,
+.order__specifications a {
+  font-size: 16px;
+  line-height: 24px;
+}
+.order__specifications p {
+  font-weight: 500;
+}
+.order__specifications span {
+  color: #8f9bb3;
+}
+.order__specifications a {
+  color: #3366ff;
+}
+.order__track {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+  padding: 0.8rem 0;
+  overflow-x: auto;
+}
+.order__track::-webkit-scrollbar {
+  display: none;
+}
+.order__track > div:nth-child(even) {
+  width: 40px;
+  height: 1px;
+  background-color: #edf1f7;
+  margin-top: 1.6rem;
+}
+.order__step {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8f9bb3;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+  white-space: nowrap;
+}
+.order__step div {
+  align-items: center;
+  background-color: rgba(143, 155, 179, 0.08);
+  border-radius: 50%;
+  border: 1px solid #8f9bb3;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+.order__step--expected {
+  color: #00d68f;
+}
+.order__step--expected div {
+  background-color: rgba(0, 214, 143, 0.08);
+  border: 1px solid #00d68f;
+}
+.order__step--ready {
+  color: #00d68f;
+}
+.order__step--ready div {
+  background-color: #00d68f;
+  border: 1px solid #00d68f;
+  background-image: url("../../images/icon-done.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .hero__orders {
+    gap: 0.8rem;
+  }
+
+  .hero__order {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  .order__info {
+    padding: 2.4rem 0 2.4rem 0;
+    grid-template-columns: repeat(4, 2fr) auto;
+    grid-row-gap: 0rem;
+    align-items: center;
+  }
+  .order__info > div:last-of-type {
+    margin-top: 0rem;
+    grid-column: 5/6;
+  }
+
+  .order__link {
+    grid-template-rows: 1fr;
+    grid-row-gap: 0;
+    grid-column-gap: 1.6rem;
+  }
+  .order__link a {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .order__specifications {
+    padding: 2.4rem 0;
+    gap: 1.2rem;
+  }
+  .order__specifications > div {
+    flex-direction: row;
+    gap: 1.6rem;
+    align-items: center;
+  }
+  .order__specifications span {
+    width: 152px;
+  }
+}
 .block {
   padding-left: 1.6rem;
   padding-right: 1.6rem;

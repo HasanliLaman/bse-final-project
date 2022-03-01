@@ -106,12 +106,33 @@ const keywordHandler = function () {
   });
 };
 
+//Expand order list items when button is clicked
+const expandOrder = function () {
+  const btnExpand = document.querySelectorAll(".order__expand");
+
+  btnExpand?.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const orderContent = btn.parentElement.parentElement.nextElementSibling;
+      const orderDetails = orderContent.querySelectorAll(".order__details");
+      contentHeight = orderDetails.length * orderDetails[0].offsetHeight;
+
+      btn.classList.toggle("order__expand--active");
+      if (orderContent.offsetHeight == 0) {
+        orderContent.style.height = `${contentHeight}px`;
+      } else {
+        orderContent.style.height = `0px`;
+      }
+    });
+  });
+};
+
 const init = function () {
   toggleNavbar();
   currencyHandler();
   languageHandler();
   keywordHandler();
   redirectOrders();
+  expandOrder();
 };
 
 init();
