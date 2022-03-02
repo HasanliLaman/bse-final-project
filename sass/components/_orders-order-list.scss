@@ -1,11 +1,6 @@
 @use "../utilities/mixins" as *;
 @use "../utilities/variables" as *;
 
-body {
-  padding: 2rem;
-  background-color: #edf1f7;
-}
-
 .hero__orders {
   display: flex;
   flex-direction: column;
@@ -217,7 +212,7 @@ body {
   }
 }
 
-@include md {
+@include xl {
   .hero__orders {
     gap: 0.8rem;
   }

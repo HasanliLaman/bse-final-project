@@ -58,7 +58,7 @@ const languageHandler = function () {
 
 // Redirects to Orders page when button is clicked
 const redirectOrders = function () {
-  const btnSubmit = document.querySelector(".hero__form button");
+  const btnSubmit = document.querySelector("form button");
   btnSubmit?.addEventListener("click", function (e) {
     e.preventDefault();
     window.location.href = "../orders.html";

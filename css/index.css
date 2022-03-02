@@ -172,6 +172,10 @@ h5 {
   font-weight: 500;
 }
 
+.text-muted {
+  color: #8f9bb3;
+}
+
 .hero__form {
   padding: 2.5rem 1.6rem 5.6rem;
 }
@@ -258,7 +262,7 @@ h5 {
 @media (min-width: 768px) {
   .hero__form {
     max-width: 384px;
-    padding: 5.6rem 1.6rem 2rem;
+    padding: 5.6rem 1.6rem 4rem;
   }
 }
 @media (min-width: 992px) {
@@ -693,11 +697,13 @@ nav .nav__currency {
   background-color: #fff2af;
   display: flex;
   flex-direction: column;
-  gap: 4.8rem;
   padding: 4.8rem 1.6rem;
 }
 .hero__content p:not(p:last-of-type) {
   margin-bottom: 2rem;
+}
+.hero__content article {
+  margin-top: 4.8rem;
 }
 @media (min-width: 768px) {
   .hero {
@@ -710,7 +716,12 @@ nav .nav__currency {
   .hero .hero__content article,
 .hero .hero__content svg {
     max-width: 488px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero article {
+    max-height: 350px;
+    overflow: hidden;
   }
   .hero .hero__form {
     justify-self: center;
@@ -720,13 +731,18 @@ nav .nav__currency {
   .hero .hero__content {
     position: relative;
     overflow: hidden;
+    z-index: -2;
   }
   .hero .hero__content article,
 .hero .hero__content svg {
     width: 488px;
     padding-left: 0;
     padding-right: 0;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero .hero__content article {
+    max-height: 270px;
   }
   .hero .hero__circle {
     position: absolute;
@@ -736,6 +752,7 @@ nav .nav__currency {
     height: 400px;
     background-color: rgba(255, 255, 255, 0.32);
     border-radius: 50%;
+    z-index: -1;
   }
 }
 @media (min-width: 1200px) {

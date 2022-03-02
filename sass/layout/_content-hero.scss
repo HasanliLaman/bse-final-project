@@ -8,11 +8,14 @@
     background-color: $color-light-yellow;
     display: flex;
     flex-direction: column;
-    gap: 4.8rem;
     padding: 4.8rem 1.6rem;
 
     p:not(p:last-of-type) {
       margin-bottom: 2rem;
+    }
+
+    article {
+      margin-top: 4.8rem;
     }
   }
 
@@ -26,8 +29,14 @@
       article,
       svg {
         max-width: 488px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
       }
+    }
+
+    article {
+      max-height: 350px;
+      overflow: hidden;
     }
 
     .hero__form {
@@ -39,13 +48,19 @@
     .hero__content {
       position: relative;
       overflow: hidden;
+      z-index: -2;
 
       article,
       svg {
         width: 488px;
         padding-left: 0;
         padding-right: 0;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      article {
+        max-height: 270px;
       }
     }
 
@@ -57,6 +72,7 @@
       height: 400px;
       background-color: rgba(255, 255, 255, 0.32);
       border-radius: 50%;
+      z-index: -1;
     }
   }
 

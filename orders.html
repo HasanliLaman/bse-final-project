@@ -12,6 +12,696 @@
     <link rel="stylesheet" href="css/orders.css" />
   </head>
   <body>
+    <section class="hero">
+      <div class="container">
+        <aside class="hero__menu">
+          <header class="hide-mobile">Menus</header>
+          <ul>
+            <li class="hero__menu--active">
+              <div class="hide-mobile">
+                <img src="images/my-orders.svg" alt="My orders" />
+              </div>
+              <a href="">My orders</a>
+            </li>
+            <li>
+              <div class="hide-mobile">
+                <img src="images/marketplace.svg" alt="Marketplace" />
+              </div>
+              <a href="">Marketplace</a>
+            </li>
+            <li>
+              <div class="hide-mobile">
+                <img src="images/wishlist.svg" alt="Wishlist" />
+              </div>
+              <a href="">Wishlist</a>
+            </li>
+            <li>
+              <div class="hide-mobile">
+                <img src="images/billing.svg" alt="Billing" />
+              </div>
+              <a href="">Billing</a>
+            </li>
+            <li>
+              <div class="hide-mobile">
+                <img src="images/support.svg" alt="Support" />
+              </div>
+              <a href="">Support</a>
+            </li>
+            <li>
+              <div class="hide-mobile">
+                <img src="images/my-profile.svg" alt="My profile" />
+              </div>
+              <a href="">My profile</a>
+            </li>
+            <li>
+              <div class="hide-mobile">
+                <img src="images/settings.svg" alt="Settings" />
+              </div>
+              <a href="">Settings</a>
+            </li>
+            <li>
+              <div class="hide-mobile">
+                <img src="images/log-out.svg" alt="Log out" />
+              </div>
+              <a href="signin.html">Log out</a>
+            </li>
+          </ul>
+        </aside>
+
+        <main>
+          <header>
+            <h1>My orders</h1>
+            <a href="">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9 7.66668H7.66666V9.00001C7.66666 9.36668 7.36666 9.66668 7 9.66668C6.63333 9.66668 6.33333 9.36668 6.33333 9.00001V7.66668H4.99999C4.63333 7.66668 4.33333 7.36668 4.33333 7.00001C4.33333 6.63334 4.63333 6.33334 4.99999 6.33334H6.33333V5.00001C6.33333 4.63334 6.63333 4.33334 7 4.33334C7.36666 4.33334 7.66666 4.63334 7.66666 5.00001V6.33334H9C9.36666 6.33334 9.66666 6.63334 9.66666 7.00001C9.66666 7.36668 9.36666 7.66668 9 7.66668ZM7 0.333344C3.324 0.333344 0.333328 3.32401 0.333328 7.00001C0.333328 10.676 3.324 13.6667 7 13.6667C10.676 13.6667 13.6667 10.676 13.6667 7.00001C13.6667 3.32401 10.676 0.333344 7 0.333344Z"
+                  fill="white"
+                />
+              </svg>
+              Add order
+            </a>
+          </header>
+          <div class="hero__orders">
+            <div class="hero__order">
+              <div class="order__info">
+                <div>
+                  <span>Order ID:</span>
+                  <p>10055</p>
+                </div>
+                <div>
+                  <span>Date:</span>
+                  <p>Jul 3, 2020</p>
+                </div>
+                <div>
+                  <span>Price:</span>
+                  <p>$570</p>
+                </div>
+                <div>
+                  <span>Status:</span>
+                  <p class="order__status--completed">Completed</p>
+                </div>
+                <div>
+                  <div class="order__expand">
+                    <svg viewBox="0 0 14 7" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.00003 6.99998C6.77203 6.99998 6.54503 6.92298 6.36003 6.76798L0.360031 1.76798C-0.0639688 1.41498 -0.121969 0.783984 0.232031 0.359984C0.585031 -0.0640163 1.21503 -0.121016 1.64003 0.231984L7.01103 4.70798L12.373 0.392984C12.803 0.0469837 13.433 0.114984 13.779 0.544984C14.125 0.974984 14.057 1.60398 13.627 1.95098L7.62703 6.77898C7.44403 6.92598 7.22203 6.99998 7.00003 6.99998Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order__content order__content--active">
+                <div class="order__details">
+                  <div class="order__link">
+                    <p>#1</p>
+                    <a href="">
+                      <svg
+                        width="16.67"
+                        height="16.67"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12.617 17.552C13.666 16.054 14.757 13.851 14.975 11H17.93C17.547 14.052 15.441 16.57 12.617 17.552ZM2.069 11H5.061C5.267 13.862 6.344 16.056 7.407 17.561C4.57 16.584 2.454 14.061 2.069 11ZM7.438 2.429C6.386 3.927 5.285 6.137 5.065 9H2.069C2.455 5.928 4.586 3.397 7.438 2.429ZM7.079 9C7.385 5.728 9.059 3.45 10.026 2.397C11.026 3.468 12.674 5.725 12.959 9H7.079ZM7.08 11H12.962C12.656 14.277 10.978 16.555 10.012 17.608C8.965 16.498 7.359 14.272 7.08 11ZM17.93 9H14.978C14.773 6.151 13.708 3.964 12.65 2.461C15.458 3.451 17.549 5.96 17.93 9ZM20 10C20 4.496 15.529 0.018 10.028 0.002C10.024 0.002 10.02 0.001 10.015 0.001C10.011 0.001 10.005 0 10 0C4.486 0 0 4.487 0 10C0 15.514 4.486 20 10 20C10.006 20 10.011 19.999 10.015 19.999C10.017 19.999 10.018 20 10.02 20C10.023 20 10.026 19.998 10.028 19.998C15.529 19.983 20 15.504 20 10Z"
+                          fill="#231F20"
+                        />
+                      </svg>
+                      https://www.nytimes.com
+                    </a>
+                    <svg
+                      width="16"
+                      height="20"
+                      viewBox="0 0 16 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.98314 5.3229L2.36614 10.9399L2.10214 13.8959L5.07914 13.6249L10.6791 8.0189L7.98314 5.3229ZM13.9661 4.7289L11.2711 2.0349L9.32314 3.9829L12.0181 6.6789L13.9661 4.7289ZM1.09114 15.9959C1.06014 15.9989 1.03014 15.9999 1.00014 15.9999C0.736142 15.9999 0.481142 15.8959 0.293142 15.7069C0.0831418 15.4969 -0.0228583 15.2049 0.00414175 14.9099L0.383142 10.7389C0.425142 10.2819 0.627142 9.8509 0.952142 9.5259L9.94814 0.528898C10.6501 -0.175102 11.9241 -0.140102 12.6641 0.598898L15.4021 3.3369H15.4031C16.1691 4.1039 16.1991 5.3209 15.4711 6.0509L6.47414 15.0479C6.14914 15.3739 5.71914 15.5749 5.26114 15.6169L1.09114 15.9959ZM1 18H15C15.55 18 16 18.45 16 19C16 19.55 15.55 20 15 20H1C0.45 20 0 19.55 0 19C0 18.45 0.45 18 1 18Z"
+                        fill="#8F9BB3"
+                      />
+                    </svg>
+                  </div>
+                  <div class="order__specifications">
+                    <div>
+                      <span>Type:</span>
+                      <p>Press release</p>
+                    </div>
+                    <div>
+                      <span>Article language:</span>
+                      <p>English</p>
+                    </div>
+                    <div>
+                      <span>Title:</span>
+                      <p>Benchmarking in the business side</p>
+                    </div>
+                    <div>
+                      <span>Target URL:</span>
+                      <a href="https://pickvisa.com/visa-chance-calculator"
+                        >https://pickvisa.com/visa-chance-calculator</a
+                      >
+                    </div>
+                    <div>
+                      <span>Anchor text:</span>
+                      <p>Visa chance calculator</p>
+                    </div>
+                    <div>
+                      <span>Who is the author?:</span>
+                      <p>Press release</p>
+                    </div>
+                    <div>
+                      <span>Article link:</span>
+                      <p class="text-muted">Not submitted yet by seller</p>
+                    </div>
+                  </div>
+                  <div class="order__track">
+                    <div class="order__step order__step--ready">
+                      <div>1</div>
+                      <p>Payment received</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step order__step--expected">
+                      <div>2</div>
+                      <p>Details added</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>3</div>
+                      <p>Request accepted</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>4</div>
+                      <p>Article ready</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>5</div>
+                      <p>Article posted</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="order__details">
+                  <div class="order__link">
+                    <p>#2</p>
+                    <a href="">
+                      <svg
+                        width="16.67"
+                        height="16.67"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12.617 17.552C13.666 16.054 14.757 13.851 14.975 11H17.93C17.547 14.052 15.441 16.57 12.617 17.552ZM2.069 11H5.061C5.267 13.862 6.344 16.056 7.407 17.561C4.57 16.584 2.454 14.061 2.069 11ZM7.438 2.429C6.386 3.927 5.285 6.137 5.065 9H2.069C2.455 5.928 4.586 3.397 7.438 2.429ZM7.079 9C7.385 5.728 9.059 3.45 10.026 2.397C11.026 3.468 12.674 5.725 12.959 9H7.079ZM7.08 11H12.962C12.656 14.277 10.978 16.555 10.012 17.608C8.965 16.498 7.359 14.272 7.08 11ZM17.93 9H14.978C14.773 6.151 13.708 3.964 12.65 2.461C15.458 3.451 17.549 5.96 17.93 9ZM20 10C20 4.496 15.529 0.018 10.028 0.002C10.024 0.002 10.02 0.001 10.015 0.001C10.011 0.001 10.005 0 10 0C4.486 0 0 4.487 0 10C0 15.514 4.486 20 10 20C10.006 20 10.011 19.999 10.015 19.999C10.017 19.999 10.018 20 10.02 20C10.023 20 10.026 19.998 10.028 19.998C15.529 19.983 20 15.504 20 10Z"
+                          fill="#231F20"
+                        />
+                      </svg>
+                      https://www.medium.com
+                    </a>
+                    <svg
+                      width="16"
+                      height="20"
+                      viewBox="0 0 16 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.98314 5.3229L2.36614 10.9399L2.10214 13.8959L5.07914 13.6249L10.6791 8.0189L7.98314 5.3229ZM13.9661 4.7289L11.2711 2.0349L9.32314 3.9829L12.0181 6.6789L13.9661 4.7289ZM1.09114 15.9959C1.06014 15.9989 1.03014 15.9999 1.00014 15.9999C0.736142 15.9999 0.481142 15.8959 0.293142 15.7069C0.0831418 15.4969 -0.0228583 15.2049 0.00414175 14.9099L0.383142 10.7389C0.425142 10.2819 0.627142 9.8509 0.952142 9.5259L9.94814 0.528898C10.6501 -0.175102 11.9241 -0.140102 12.6641 0.598898L15.4021 3.3369H15.4031C16.1691 4.1039 16.1991 5.3209 15.4711 6.0509L6.47414 15.0479C6.14914 15.3739 5.71914 15.5749 5.26114 15.6169L1.09114 15.9959ZM1 18H15C15.55 18 16 18.45 16 19C16 19.55 15.55 20 15 20H1C0.45 20 0 19.55 0 19C0 18.45 0.45 18 1 18Z"
+                        fill="#8F9BB3"
+                      />
+                    </svg>
+                  </div>
+                  <div class="order__specifications">
+                    <div>
+                      <span>Type:</span>
+                      <p>Press release</p>
+                    </div>
+                    <div>
+                      <span>Article language:</span>
+                      <p>English</p>
+                    </div>
+                    <div>
+                      <span>Title:</span>
+                      <p>Worry less about spacing in design tools</p>
+                    </div>
+                    <div>
+                      <span>Target URL:</span>
+                      <a href="https://vizam.az/travel-insurance"
+                        >https://vizam.az/travel-insurance</a
+                      >
+                    </div>
+                    <div>
+                      <span>Anchor text:</span>
+                      <p>Travel Insurance</p>
+                    </div>
+                    <div>
+                      <span>Who is the author?:</span>
+                      <p>Myself: designtools.docx</p>
+                    </div>
+                    <div>
+                      <span>Article link:</span>
+                      <a href="uxplanet.org/interface-designpatterns "
+                        >uxplanet.org/interface-designpatterns
+                      </a>
+                    </div>
+                  </div>
+                  <div class="order__track">
+                    <div class="order__step order__step--ready">
+                      <div>1</div>
+                      <p>Payment received</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step order__step--expected">
+                      <div>2</div>
+                      <p>Details added</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>3</div>
+                      <p>Request accepted</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>4</div>
+                      <p>Article ready</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>5</div>
+                      <p>Article posted</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero__order">
+              <div class="order__info">
+                <div>
+                  <span>Order ID:</span>
+                  <p>10055</p>
+                </div>
+                <div>
+                  <span>Date:</span>
+                  <p>Jul 3, 2020</p>
+                </div>
+                <div>
+                  <span>Price:</span>
+                  <p>$570</p>
+                </div>
+                <div>
+                  <span>Status:</span>
+                  <p class="order__status--completed">Completed</p>
+                </div>
+                <div>
+                  <div class="order__expand">
+                    <svg viewBox="0 0 14 7" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.00003 6.99998C6.77203 6.99998 6.54503 6.92298 6.36003 6.76798L0.360031 1.76798C-0.0639688 1.41498 -0.121969 0.783984 0.232031 0.359984C0.585031 -0.0640163 1.21503 -0.121016 1.64003 0.231984L7.01103 4.70798L12.373 0.392984C12.803 0.0469837 13.433 0.114984 13.779 0.544984C14.125 0.974984 14.057 1.60398 13.627 1.95098L7.62703 6.77898C7.44403 6.92598 7.22203 6.99998 7.00003 6.99998Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order__content">
+                <div class="order__details">
+                  <div class="order__link">
+                    <p>#1</p>
+                    <a href="">
+                      <svg
+                        width="16.67"
+                        height="16.67"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12.617 17.552C13.666 16.054 14.757 13.851 14.975 11H17.93C17.547 14.052 15.441 16.57 12.617 17.552ZM2.069 11H5.061C5.267 13.862 6.344 16.056 7.407 17.561C4.57 16.584 2.454 14.061 2.069 11ZM7.438 2.429C6.386 3.927 5.285 6.137 5.065 9H2.069C2.455 5.928 4.586 3.397 7.438 2.429ZM7.079 9C7.385 5.728 9.059 3.45 10.026 2.397C11.026 3.468 12.674 5.725 12.959 9H7.079ZM7.08 11H12.962C12.656 14.277 10.978 16.555 10.012 17.608C8.965 16.498 7.359 14.272 7.08 11ZM17.93 9H14.978C14.773 6.151 13.708 3.964 12.65 2.461C15.458 3.451 17.549 5.96 17.93 9ZM20 10C20 4.496 15.529 0.018 10.028 0.002C10.024 0.002 10.02 0.001 10.015 0.001C10.011 0.001 10.005 0 10 0C4.486 0 0 4.487 0 10C0 15.514 4.486 20 10 20C10.006 20 10.011 19.999 10.015 19.999C10.017 19.999 10.018 20 10.02 20C10.023 20 10.026 19.998 10.028 19.998C15.529 19.983 20 15.504 20 10Z"
+                          fill="#231F20"
+                        />
+                      </svg>
+                      https://www.nytimes.com
+                    </a>
+                    <svg
+                      width="16"
+                      height="20"
+                      viewBox="0 0 16 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.98314 5.3229L2.36614 10.9399L2.10214 13.8959L5.07914 13.6249L10.6791 8.0189L7.98314 5.3229ZM13.9661 4.7289L11.2711 2.0349L9.32314 3.9829L12.0181 6.6789L13.9661 4.7289ZM1.09114 15.9959C1.06014 15.9989 1.03014 15.9999 1.00014 15.9999C0.736142 15.9999 0.481142 15.8959 0.293142 15.7069C0.0831418 15.4969 -0.0228583 15.2049 0.00414175 14.9099L0.383142 10.7389C0.425142 10.2819 0.627142 9.8509 0.952142 9.5259L9.94814 0.528898C10.6501 -0.175102 11.9241 -0.140102 12.6641 0.598898L15.4021 3.3369H15.4031C16.1691 4.1039 16.1991 5.3209 15.4711 6.0509L6.47414 15.0479C6.14914 15.3739 5.71914 15.5749 5.26114 15.6169L1.09114 15.9959ZM1 18H15C15.55 18 16 18.45 16 19C16 19.55 15.55 20 15 20H1C0.45 20 0 19.55 0 19C0 18.45 0.45 18 1 18Z"
+                        fill="#8F9BB3"
+                      />
+                    </svg>
+                  </div>
+                  <div class="order__specifications">
+                    <div>
+                      <span>Type:</span>
+                      <p>Press release</p>
+                    </div>
+                    <div>
+                      <span>Article language:</span>
+                      <p>English</p>
+                    </div>
+                    <div>
+                      <span>Title:</span>
+                      <p>Benchmarking in the business side</p>
+                    </div>
+                    <div>
+                      <span>Target URL:</span>
+                      <a href="https://pickvisa.com/visa-chance-calculator"
+                        >https://pickvisa.com/visa-chance-calculator</a
+                      >
+                    </div>
+                    <div>
+                      <span>Anchor text:</span>
+                      <p>Visa chance calculator</p>
+                    </div>
+                    <div>
+                      <span>Who is the author?:</span>
+                      <p>Press release</p>
+                    </div>
+                    <div>
+                      <span>Article link:</span>
+                      <p class="text-muted">Not submitted yet by seller</p>
+                    </div>
+                  </div>
+                  <div class="order__track">
+                    <div class="order__step order__step--ready">
+                      <div>1</div>
+                      <p>Payment received</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step order__step--expected">
+                      <div>2</div>
+                      <p>Details added</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>3</div>
+                      <p>Request accepted</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>4</div>
+                      <p>Article ready</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>5</div>
+                      <p>Article posted</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero__order">
+              <div class="order__info">
+                <div>
+                  <span>Order ID:</span>
+                  <p>10055</p>
+                </div>
+                <div>
+                  <span>Date:</span>
+                  <p>Jul 3, 2020</p>
+                </div>
+                <div>
+                  <span>Price:</span>
+                  <p>$570</p>
+                </div>
+                <div>
+                  <span>Status:</span>
+                  <p class="order__status--completed">Completed</p>
+                </div>
+                <div>
+                  <div class="order__expand">
+                    <svg viewBox="0 0 14 7" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.00003 6.99998C6.77203 6.99998 6.54503 6.92298 6.36003 6.76798L0.360031 1.76798C-0.0639688 1.41498 -0.121969 0.783984 0.232031 0.359984C0.585031 -0.0640163 1.21503 -0.121016 1.64003 0.231984L7.01103 4.70798L12.373 0.392984C12.803 0.0469837 13.433 0.114984 13.779 0.544984C14.125 0.974984 14.057 1.60398 13.627 1.95098L7.62703 6.77898C7.44403 6.92598 7.22203 6.99998 7.00003 6.99998Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order__content">
+                <div class="order__details">
+                  <div class="order__link">
+                    <p>#1</p>
+                    <a href="">
+                      <svg
+                        width="16.67"
+                        height="16.67"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12.617 17.552C13.666 16.054 14.757 13.851 14.975 11H17.93C17.547 14.052 15.441 16.57 12.617 17.552ZM2.069 11H5.061C5.267 13.862 6.344 16.056 7.407 17.561C4.57 16.584 2.454 14.061 2.069 11ZM7.438 2.429C6.386 3.927 5.285 6.137 5.065 9H2.069C2.455 5.928 4.586 3.397 7.438 2.429ZM7.079 9C7.385 5.728 9.059 3.45 10.026 2.397C11.026 3.468 12.674 5.725 12.959 9H7.079ZM7.08 11H12.962C12.656 14.277 10.978 16.555 10.012 17.608C8.965 16.498 7.359 14.272 7.08 11ZM17.93 9H14.978C14.773 6.151 13.708 3.964 12.65 2.461C15.458 3.451 17.549 5.96 17.93 9ZM20 10C20 4.496 15.529 0.018 10.028 0.002C10.024 0.002 10.02 0.001 10.015 0.001C10.011 0.001 10.005 0 10 0C4.486 0 0 4.487 0 10C0 15.514 4.486 20 10 20C10.006 20 10.011 19.999 10.015 19.999C10.017 19.999 10.018 20 10.02 20C10.023 20 10.026 19.998 10.028 19.998C15.529 19.983 20 15.504 20 10Z"
+                          fill="#231F20"
+                        />
+                      </svg>
+                      https://www.nytimes.com
+                    </a>
+                    <svg
+                      width="16"
+                      height="20"
+                      viewBox="0 0 16 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.98314 5.3229L2.36614 10.9399L2.10214 13.8959L5.07914 13.6249L10.6791 8.0189L7.98314 5.3229ZM13.9661 4.7289L11.2711 2.0349L9.32314 3.9829L12.0181 6.6789L13.9661 4.7289ZM1.09114 15.9959C1.06014 15.9989 1.03014 15.9999 1.00014 15.9999C0.736142 15.9999 0.481142 15.8959 0.293142 15.7069C0.0831418 15.4969 -0.0228583 15.2049 0.00414175 14.9099L0.383142 10.7389C0.425142 10.2819 0.627142 9.8509 0.952142 9.5259L9.94814 0.528898C10.6501 -0.175102 11.9241 -0.140102 12.6641 0.598898L15.4021 3.3369H15.4031C16.1691 4.1039 16.1991 5.3209 15.4711 6.0509L6.47414 15.0479C6.14914 15.3739 5.71914 15.5749 5.26114 15.6169L1.09114 15.9959ZM1 18H15C15.55 18 16 18.45 16 19C16 19.55 15.55 20 15 20H1C0.45 20 0 19.55 0 19C0 18.45 0.45 18 1 18Z"
+                        fill="#8F9BB3"
+                      />
+                    </svg>
+                  </div>
+                  <div class="order__specifications">
+                    <div>
+                      <span>Type:</span>
+                      <p>Press release</p>
+                    </div>
+                    <div>
+                      <span>Article language:</span>
+                      <p>English</p>
+                    </div>
+                    <div>
+                      <span>Title:</span>
+                      <p>Benchmarking in the business side</p>
+                    </div>
+                    <div>
+                      <span>Target URL:</span>
+                      <a href="https://pickvisa.com/visa-chance-calculator"
+                        >https://pickvisa.com/visa-chance-calculator</a
+                      >
+                    </div>
+                    <div>
+                      <span>Anchor text:</span>
+                      <p>Visa chance calculator</p>
+                    </div>
+                    <div>
+                      <span>Who is the author?:</span>
+                      <p>Press release</p>
+                    </div>
+                    <div>
+                      <span>Article link:</span>
+                      <p class="text-muted">Not submitted yet by seller</p>
+                    </div>
+                  </div>
+                  <div class="order__track">
+                    <div class="order__step order__step--ready">
+                      <div>1</div>
+                      <p>Payment received</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step order__step--expected">
+                      <div>2</div>
+                      <p>Details added</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>3</div>
+                      <p>Request accepted</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>4</div>
+                      <p>Article ready</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>5</div>
+                      <p>Article posted</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero__order">
+              <div class="order__info">
+                <div>
+                  <span>Order ID:</span>
+                  <p>10055</p>
+                </div>
+                <div>
+                  <span>Date:</span>
+                  <p>Jul 3, 2020</p>
+                </div>
+                <div>
+                  <span>Price:</span>
+                  <p>$570</p>
+                </div>
+                <div>
+                  <span>Status:</span>
+                  <p class="order__status--completed">Completed</p>
+                </div>
+                <div>
+                  <div class="order__expand">
+                    <svg viewBox="0 0 14 7" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.00003 6.99998C6.77203 6.99998 6.54503 6.92298 6.36003 6.76798L0.360031 1.76798C-0.0639688 1.41498 -0.121969 0.783984 0.232031 0.359984C0.585031 -0.0640163 1.21503 -0.121016 1.64003 0.231984L7.01103 4.70798L12.373 0.392984C12.803 0.0469837 13.433 0.114984 13.779 0.544984C14.125 0.974984 14.057 1.60398 13.627 1.95098L7.62703 6.77898C7.44403 6.92598 7.22203 6.99998 7.00003 6.99998Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order__content">
+                <div class="order__details">
+                  <div class="order__link">
+                    <p>#1</p>
+                    <a href="">
+                      <svg
+                        width="16.67"
+                        height="16.67"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12.617 17.552C13.666 16.054 14.757 13.851 14.975 11H17.93C17.547 14.052 15.441 16.57 12.617 17.552ZM2.069 11H5.061C5.267 13.862 6.344 16.056 7.407 17.561C4.57 16.584 2.454 14.061 2.069 11ZM7.438 2.429C6.386 3.927 5.285 6.137 5.065 9H2.069C2.455 5.928 4.586 3.397 7.438 2.429ZM7.079 9C7.385 5.728 9.059 3.45 10.026 2.397C11.026 3.468 12.674 5.725 12.959 9H7.079ZM7.08 11H12.962C12.656 14.277 10.978 16.555 10.012 17.608C8.965 16.498 7.359 14.272 7.08 11ZM17.93 9H14.978C14.773 6.151 13.708 3.964 12.65 2.461C15.458 3.451 17.549 5.96 17.93 9ZM20 10C20 4.496 15.529 0.018 10.028 0.002C10.024 0.002 10.02 0.001 10.015 0.001C10.011 0.001 10.005 0 10 0C4.486 0 0 4.487 0 10C0 15.514 4.486 20 10 20C10.006 20 10.011 19.999 10.015 19.999C10.017 19.999 10.018 20 10.02 20C10.023 20 10.026 19.998 10.028 19.998C15.529 19.983 20 15.504 20 10Z"
+                          fill="#231F20"
+                        />
+                      </svg>
+                      https://www.nytimes.com
+                    </a>
+                    <svg
+                      width="16"
+                      height="20"
+                      viewBox="0 0 16 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.98314 5.3229L2.36614 10.9399L2.10214 13.8959L5.07914 13.6249L10.6791 8.0189L7.98314 5.3229ZM13.9661 4.7289L11.2711 2.0349L9.32314 3.9829L12.0181 6.6789L13.9661 4.7289ZM1.09114 15.9959C1.06014 15.9989 1.03014 15.9999 1.00014 15.9999C0.736142 15.9999 0.481142 15.8959 0.293142 15.7069C0.0831418 15.4969 -0.0228583 15.2049 0.00414175 14.9099L0.383142 10.7389C0.425142 10.2819 0.627142 9.8509 0.952142 9.5259L9.94814 0.528898C10.6501 -0.175102 11.9241 -0.140102 12.6641 0.598898L15.4021 3.3369H15.4031C16.1691 4.1039 16.1991 5.3209 15.4711 6.0509L6.47414 15.0479C6.14914 15.3739 5.71914 15.5749 5.26114 15.6169L1.09114 15.9959ZM1 18H15C15.55 18 16 18.45 16 19C16 19.55 15.55 20 15 20H1C0.45 20 0 19.55 0 19C0 18.45 0.45 18 1 18Z"
+                        fill="#8F9BB3"
+                      />
+                    </svg>
+                  </div>
+                  <div class="order__specifications">
+                    <div>
+                      <span>Type:</span>
+                      <p>Press release</p>
+                    </div>
+                    <div>
+                      <span>Article language:</span>
+                      <p>English</p>
+                    </div>
+                    <div>
+                      <span>Title:</span>
+                      <p>Benchmarking in the business side</p>
+                    </div>
+                    <div>
+                      <span>Target URL:</span>
+                      <a href="https://pickvisa.com/visa-chance-calculator"
+                        >https://pickvisa.com/visa-chance-calculator</a
+                      >
+                    </div>
+                    <div>
+                      <span>Anchor text:</span>
+                      <p>Visa chance calculator</p>
+                    </div>
+                    <div>
+                      <span>Who is the author?:</span>
+                      <p>Press release</p>
+                    </div>
+                    <div>
+                      <span>Article link:</span>
+                      <p class="text-muted">Not submitted yet by seller</p>
+                    </div>
+                  </div>
+                  <div class="order__track">
+                    <div class="order__step order__step--ready">
+                      <div>1</div>
+                      <p>Payment received</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step order__step--expected">
+                      <div>2</div>
+                      <p>Details added</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>3</div>
+                      <p>Request accepted</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>4</div>
+                      <p>Article ready</p>
+                    </div>
+                    <div></div>
+                    <div class="order__step">
+                      <div>5</div>
+                      <p>Article posted</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
     <script src="js/main.js"></script>
   </body>
 </html>
