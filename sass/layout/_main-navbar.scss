@@ -2,7 +2,9 @@
 @use "../utilities/variables" as *;
 
 nav {
-  border-bottom: 1px solid #e5e5e5;
+  &.nav-border {
+    border-bottom: 1px solid #e5e5e5;
+  }
 
   & > div {
     display: flex;
