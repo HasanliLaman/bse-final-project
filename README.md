@@ -16,4 +16,8 @@ If you have difficulty importing a figma file, you can use the links below
 
 [Video: Importing & Exporting](https://www.youtube.com/watch?v=cpG3foCWX-E&t=1s)
 
-Sign_in, Content_order_1, My_orders_buyers
+**Instructions**:
+
+- On Content order page: Click Continue button to go My Orders page, Log in button to go Log in page
+- On Log in page: Click navbar logo to go Content order page, Log in button to go My Orders page
+- On My Orders page: Click navbar logo to go Content order page, Log out button to go Log in page
