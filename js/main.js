@@ -72,7 +72,8 @@ const keywordHandler = function () {
   const btnClose = document.querySelectorAll(".hero__keywords svg");
 
   keywordInput?.addEventListener("keyup", function (e) {
-    if (e.keyCode == 188) {
+    const letters = /^[A-Za-z]+$/;
+    if (e.keyCode == 188 && keywordInput.value.slice(0, -1).match(letters)) {
       e.preventDefault();
       keywordContainer.insertAdjacentHTML(
         "beforeend",
@@ -126,6 +127,52 @@ const expandOrder = function () {
   });
 };
 
+// Add box shadow to focused password field
+const passwordFocused = function () {
+  const passwordField = document.querySelector(".form__password");
+  const password = document.querySelector("#password");
+
+  password?.addEventListener("focus", () =>
+    passwordField.classList.add("form--focused")
+  );
+
+  password?.addEventListener("blur", () =>
+    passwordField.classList.remove("form--focused")
+  );
+};
+
+// Show/hide password in Log in page form
+const passwordVisibilityHandler = function () {
+  const password = document.querySelector("#password");
+  const iconPassword = document.querySelector(".icon__eye img");
+
+  iconPassword?.addEventListener("click", function () {
+    password.type = password.type === "password" ? "text" : "password";
+    iconPassword.id = iconPassword.id === "closed" ? "open" : "closed";
+    iconPassword.src = `../images/${iconPassword.id}-eye.svg`;
+  });
+};
+
+// Make Sign in button fixed on scroll
+const btnFixed = function () {
+  const btn = document.querySelector("#content-form > div:last-of-type");
+  const heroContent = document.querySelector(".hero__content");
+
+  let observer = new IntersectionObserver(function (entries) {
+    entries.map((entry) => {
+      if (entry.isIntersecting) {
+        btn.classList.add("btn--fixed");
+      } else {
+        btn.classList.remove("btn--fixed");
+      }
+    });
+  });
+
+  if (heroContent) {
+    observer.observe(heroContent);
+  }
+};
+
 const init = function () {
   toggleNavbar();
   currencyHandler();
@@ -133,6 +180,9 @@ const init = function () {
   keywordHandler();
   redirectOrders();
   expandOrder();
+  passwordFocused();
+  passwordVisibilityHandler();
+  btnFixed();
 };
 
 init();

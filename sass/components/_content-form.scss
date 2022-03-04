@@ -34,12 +34,38 @@
       @include btn($color-green, $color-white);
       padding: 1.6rem 1rem;
       width: 100%;
+      margin-top: 4.2rem;
+    }
+
+    .btn--fixed {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $color-white;
+      padding: 1.6rem;
+      z-index: 0;
+
+      button {
+        margin-top: 0rem;
+      }
     }
   }
 
   @include md {
     max-width: 384px;
     padding: 5.6rem 1.6rem 4rem;
+
+    form {
+      .btn--fixed {
+        position: static;
+        padding: 0rem;
+
+        button {
+          margin-top: 4.2rem;
+        }
+      }
+    }
   }
 
   @include lg {
@@ -75,7 +101,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  margin: 4.2rem 0;
+  margin: 4.2rem 0 0;
 
   span {
     font-size: 20px;

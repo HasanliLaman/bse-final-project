@@ -254,15 +254,35 @@ h5 {
   transition: all 0.5s;
   padding: 1.6rem 1rem;
   width: 100%;
+  margin-top: 4.2rem;
 }
 .hero__form form button:hover {
   background-color: #009966;
   border: 1px solid #009966;
 }
+.hero__form form .btn--fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 1.6rem;
+  z-index: 0;
+}
+.hero__form form .btn--fixed button {
+  margin-top: 0rem;
+}
 @media (min-width: 768px) {
   .hero__form {
     max-width: 384px;
     padding: 5.6rem 1.6rem 4rem;
+  }
+  .hero__form form .btn--fixed {
+    position: static;
+    padding: 0rem;
+  }
+  .hero__form form .btn--fixed button {
+    margin-top: 4.2rem;
   }
 }
 @media (min-width: 992px) {
@@ -297,7 +317,7 @@ h5 {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-  margin: 4.2rem 0;
+  margin: 4.2rem 0 0;
 }
 .hero__cost span {
   font-size: 20px;
@@ -365,6 +385,13 @@ h5 {
   z-index: 5;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
 nav.nav-border {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -687,6 +714,19 @@ nav .nav__currency {
     z-index: 10;
     transform: translateX(0);
     overflow: visible;
+  }
+}
+
+.nav--fixed {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .nav--fixed {
+    position: static;
   }
 }
 

@@ -25,13 +25,13 @@
     <link rel="manifest" href="images/site.webmanifest" />
     <title>Blogie | Content order</title>
     <link
-      href="http://fonts.cdnfonts.com/css/euclid-circular-a"
+      href="https://fonts.cdnfonts.com/css/euclid-circular-a"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <nav class="block nav-border">
+    <nav class="block nav-border nav--fixed">
       <div class="container">
         <svg
           class="hamburger hide-desktop"
@@ -48,7 +48,7 @@
             fill="#2E3A59"
           />
         </svg>
-        <a href="orders.html" class="nav__logo">
+        <a href="#" class="nav__logo">
           <svg
             viewBox="0 0 103 32"
             fill="none"
@@ -204,7 +204,7 @@
     <section class="hero">
       <div class="hero__form">
         <h1>Content order</h1>
-        <form>
+        <form id="content-form">
           <div class="form__group">
             <label for="field">Field</label>
             <select id="field">
@@ -293,7 +293,9 @@
 
           <div class="hero__cost">Cost: <span>$1200</span></div>
 
-          <button>Continue</button>
+          <div>
+            <button>Continue</button>
+          </div>
         </form>
       </div>
 
