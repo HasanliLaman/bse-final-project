@@ -385,13 +385,6 @@ h5 {
   z-index: 5;
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-}
 nav.nav-border {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -723,6 +716,7 @@ nav .nav__currency {
   left: 0;
   right: 0;
   background-color: #fff;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .nav--fixed {
@@ -737,7 +731,7 @@ nav .nav__currency {
   background-color: #fff2af;
   display: flex;
   flex-direction: column;
-  padding: 4.8rem 1.6rem;
+  padding: 4.8rem 1.6rem 10rem;
 }
 .hero__content p:not(p:last-of-type) {
   margin-bottom: 2rem;
@@ -752,6 +746,7 @@ nav .nav__currency {
   .hero .hero__content {
     order: -1;
     padding-top: 8rem;
+    padding-bottom: 4.8rem;
   }
   .hero .hero__content article,
 .hero .hero__content svg {

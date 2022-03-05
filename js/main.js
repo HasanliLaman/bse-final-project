@@ -158,7 +158,11 @@ const btnFixed = function () {
   const btn = document.querySelector("#content-form > div:last-of-type");
   const heroContent = document.querySelector(".hero__content");
 
-  let observer = new IntersectionObserver(function (entries) {
+  const options = {
+    threshold: 0.05,
+  };
+
+  const observer = new IntersectionObserver(function (entries) {
     entries.map((entry) => {
       if (entry.isIntersecting) {
         btn.classList.add("btn--fixed");
@@ -166,7 +170,7 @@ const btnFixed = function () {
         btn.classList.remove("btn--fixed");
       }
     });
-  });
+  }, options);
 
   if (heroContent) {
     observer.observe(heroContent);

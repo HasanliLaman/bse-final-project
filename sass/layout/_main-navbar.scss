@@ -2,12 +2,6 @@
 @use "../utilities/variables" as *;
 
 nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: $color-white;
-
   &.nav-border {
     border-bottom: 1px solid #e5e5e5;
   }
@@ -298,6 +292,7 @@ nav {
   left: 0;
   right: 0;
   background-color: $color-white;
+  z-index: 10;
 
   @include md {
     position: static;
