@@ -530,7 +530,7 @@ h5 {
   z-index: 5;
 }
 
-nav .nav-border {
+nav.nav-border {
   border-bottom: 1px solid #e5e5e5;
 }
 nav > div {
@@ -560,10 +560,10 @@ nav .nav__links {
   margin: 8rem 0;
   order: -2;
 }
-nav .nav__links li {
+nav .nav__links li a {
   transition: all 0.3s;
 }
-nav .nav__links li:hover {
+nav .nav__links li:hover a {
   color: #fbc300;
 }
 nav .nav__language,
@@ -852,6 +852,20 @@ nav .nav__currency {
     z-index: 10;
     transform: translateX(0);
     overflow: visible;
+  }
+}
+
+.nav--fixed {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .nav--fixed {
+    position: static;
   }
 }
 

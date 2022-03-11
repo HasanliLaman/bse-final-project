@@ -415,10 +415,10 @@ nav .nav__links {
   margin: 8rem 0;
   order: -2;
 }
-nav .nav__links li {
+nav .nav__links li a {
   transition: all 0.3s;
 }
-nav .nav__links li:hover {
+nav .nav__links li:hover a {
   color: #fbc300;
 }
 nav .nav__language,

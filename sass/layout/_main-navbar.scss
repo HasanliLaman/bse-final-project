@@ -38,11 +38,11 @@ nav {
     margin: 8rem 0;
     order: -2;
 
-    li {
+    li a {
       transition: all 0.3s;
     }
 
-    li:hover {
+    li:hover a {
       color: darken($color-yellow, 12%);
     }
   }

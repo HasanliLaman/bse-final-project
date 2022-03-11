@@ -5,15 +5,19 @@ const toggleNavbar = function () {
   const hamburger = document.querySelector(".hamburger");
   const btnClose = document.querySelector(".nav__close");
 
-  hamburger?.addEventListener("click", function () {
+  const openNavbar = function () {
     overlay.classList.remove("hidden");
     navbar.classList.add("nav--active");
-  });
+  };
 
-  btnClose?.addEventListener("click", function () {
-    overlay.classList.add("hidden");
+  const closeNavbar = function () {
     navbar.classList.remove("nav--active");
-  });
+    overlay.classList.add("hidden");
+  };
+
+  hamburger?.addEventListener("click", openNavbar);
+  btnClose?.addEventListener("click", closeNavbar);
+  overlay?.addEventListener("click", closeNavbar);
 };
 
 // Currency dropdown open/close and change
@@ -69,10 +73,9 @@ const redirectOrders = function () {
 const keywordHandler = function () {
   const keywordContainer = document.querySelector(".hero__keywords");
   const keywordInput = document.querySelector("#keywords");
-  const btnClose = document.querySelectorAll(".hero__keywords svg");
 
   keywordInput?.addEventListener("keyup", function (e) {
-    const letters = /^[A-Za-z]+$/;
+    const letters = /^[a-zA-Z\s]*$/;
     if (e.keyCode == 188 && keywordInput.value.slice(0, -1).match(letters)) {
       e.preventDefault();
       keywordContainer.insertAdjacentHTML(
